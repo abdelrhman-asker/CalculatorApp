@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 7%, rgba(2,2,125,1) 37%, rgba(0,212,255,1) 100%);
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.CalculatorMain {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 10%;
+  width: 100%;
+  height: 100vh;
+}
+.CalculatorMain div {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 8%;
+}
+
+
+.CalculatorMain .First-Div button {
+  width: calc(100% / 4);
+  text-align: center;
+}
+.CalculatorMain .Last-Div button {
+  width: calc(100% / 4);
+  text-align: center;
+}
+.CalculatorMain button {
+  width: calc(100% / 4);
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px gray;
+}
+.CalculatorMain button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.CalculatorMain div .Span-Two {
+  width: 50%;
+}
+
+.CalculatorMain .Output {
+  width: 70%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
   color: white;
-}
+  padding: 10px;
+  height: 15%;
+  font-size: 22px;
 
-.App-link {
-  color: #61dafb;
 }
+.CalculatorMain .Output div {
+  height: fit-content;
+  width: 100%;
+  
+}
+.Output .PreviousResult {
+  color: rgba(255, 255, 255, 0.75);
+  width: 100%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.CalculatorMain input {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  height: 50px;
+  width: 100%;
+  color: white;
+  font-size: 32px;
 }
